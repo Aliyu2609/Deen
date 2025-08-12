@@ -1,0 +1,258 @@
+/* Global Variables */
+:root {
+    --primary: #1e5b4a;
+    --secondary: #f0f0f0;
+    --accent: #d4af37;
+    --text: #333;
+    --light: #fff;
+    --dark: #0a2921;
+    --gray: #777;
+}
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text);
+    background-color: var(--secondary);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary);
+    color: var(--light);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--light);
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+    position: relative;
+}
+
+nav ul li a {
+    color: var(--light);
+    transition: color 0.3s;
+    padding: 0.5rem 0;
+}
+
+nav ul li a:hover {
+    color: var(--accent);
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent);
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Button Styles */
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.login-btn {
+    background-color: transparent;
+    color: var(--light);
+    border: 1px solid var(--light);
+}
+
+.login-btn:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.signup-btn {
+    background-color: var(--accent);
+    color: var(--primary);
+}
+
+.signup-btn:hover {
+    background-color: #e8c252;
+}
+
+.primary-btn {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+.primary-btn:hover {
+    background-color: var(--dark);
+}
+
+.secondary-btn {
+    background-color: var(--accent);
+    color: var(--primary);
+}
+
+.secondary-btn:hover {
+    background-color: #e8c252;
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: calc(100vh - 150px);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.cta-btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Features Section */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.feature-card {
+    background-color: var(--light);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+/* Auth Pages */
+.auth-container {
+    background-color: var(--light);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin: 2rem auto;
+}
+
+.auth-container h2 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    margin-top: 0.5rem;
+    color: var(--primary);
+    font-size: 0.9rem;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 1
